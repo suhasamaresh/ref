@@ -1,0 +1,56 @@
+{
+  "base_url": "http://localhost:5000",
+  "n_iter": 50,
+  "results": [
+    {
+      "label": "User authentication (login)",
+      "n": 50,
+      "mean": 77,
+      "median": 74.6,
+      "p95": 92.2,
+      "min": 71.7,
+      "max": 100.4,
+      "failures": 0
+    },
+    {
+      "label": "Resource search",
+      "n": 50,
+      "mean": 6.4,
+      "median": 6.2,
+      "p95": 7.9,
+      "min": 4.2,
+      "max": 17.7,
+      "failures": 0
+    },
+    {
+      "label": "Resource listing (GET)",
+      "n": 50,
+      "mean": 3.8,
+      "median": 3.7,
+      "p95": 5.1,
+      "min": 2.3,
+      "max": 6.5,
+      "failures": 0
+    },
+    {
+      "label": "Resource categories",
+      "n": 50,
+      "mean": 5.3,
+      "median": 5.2,
+      "p95": 6.3,
+      "min": 3.4,
+      "max": 9.6,
+      "failures": 0
+    },
+    {
+      "label": "Verification status (auth'd)",
+      "n": 50,
+      "mean": 5.5,
+      "median": 5.5,
+      "p95": 6.5,
+      "min": 3.4,
+      "max": 6.8,
+      "failures": 0
+    }
+  ]
+}

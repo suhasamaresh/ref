@@ -1,0 +1,17 @@
+import React from 'react';
+import { SafeAreaView, Text, StyleSheet } from 'react-native';
+import { useTheme } from '../../context/ThemeContext';
+import { useLanguage } from '../../context/LanguageContext';
+
+export default function ResourceMapScreen({ navigation }: any) {
+  const { theme } = useTheme();
+  const { t } = useLanguage();
+
+  const styles = StyleSheet.create({ container: { flex: 1, backgroundColor: theme.colors.background, alignItems: 'center', justifyContent: 'center' } });
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <Text style={{ color: theme.colors.text.primary }}>{t('resources.mapPlaceholder')}</Text>
+    </SafeAreaView>
+  );
+}

@@ -1,0 +1,10 @@
+flask
+sentence-transformers
+numpy
+requests
+python-dotenv
+tavily-python
+pillow
+opencv-python
+pytesseract
+scikit-learn

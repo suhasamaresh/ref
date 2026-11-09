@@ -1,0 +1,60 @@
+# Dependencies
+**/node_modules/
+.npm/
+.yarn/
+.pnp.*
+
+# Python virtual environments and generated files
+**/.venv/
+**/venv/
+**/__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# JavaScript, Python, and Expo build output
+**/dist/
+**/build/
+**/coverage/
+.expo/
+web-build/
+.metro-health-check*
+*.tsbuildinfo
+
+# Logs and runtime data
+*.log
+**/logs/
+**/uploads/*
+!**/uploads/.gitkeep
+*.pid
+*.pid.lock
+*.seed
+
+# Package-manager and tool caches
+.cache/
+.nyc_output/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tgz
+
+# Editor and operating-system files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+  mongodb:
+    image: mongo:7
+    container_name: refugeeaid-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+
+  redis:
+    image: redis:7
+    container_name: refugeeaid-redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  main-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: refugeeaid-backend
+    environment:
+      NODE_ENV: development
+      PORT: 5000
+      MONGODB_URI: mongodb://mongodb:27017/refugee_ai
+      AI_MATCHING_SERVICE_URL: http://localhost:8000
+      JWT_SECRET: benchmark-secret
+      JWT_REFRESH_SECRET: benchmark-refresh-secret
+      JWT_EXPIRES_IN: 24h
+      JWT_REFRESH_EXPIRES_IN: 7d
+      FRONTEND_URL: "*"
+    depends_on:
+      - mongodb
+      - redis
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+
+volumes:
+  mongo_data:

@@ -1,0 +1,11 @@
+# Ignore environment files and local secrets
+.env
+env.py
+
+# Python virtualenv
+.venv/
+venv/
+
+# Byte-compiled / caches
+__pycache__/
+*.py[cod]
